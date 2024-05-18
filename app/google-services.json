@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "100967899623",
+    "project_id": "caryardmanagementsystem2",
+    "storage_bucket": "caryardmanagementsystem2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100967899623:android:d72dc2d5313dcbce39dd42",
+        "android_client_info": {
+          "package_name": "com.karanjaa.caryardmanagementsystem2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASj0p5llN0sqtjUPDlG-pRNpSGoWfdJPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
