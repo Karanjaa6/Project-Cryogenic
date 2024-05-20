@@ -49,9 +49,6 @@ import com.karanjaa.caryardmanagementsystem2.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddProductsScreen(navController: NavHostController) {
-    Box (modifier = Modifier.fillMaxSize()){
-        Image(painter = painterResource(id = R.drawable.gari), contentDescription = "")
-    }
     Column(modifier = Modifier.fillMaxSize()) {
         var context = LocalContext.current
         Text(

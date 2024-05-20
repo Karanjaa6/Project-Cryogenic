@@ -21,6 +21,7 @@ import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextField
 
 import androidx.compose.runtime.getValue
@@ -32,7 +33,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -55,10 +58,9 @@ fun RegisterScreen(navController: NavController)
             modifier = Modifier.matchParentSize())
     }
     var fullnames by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
-    var pass by remember { mutableStateOf("") }
-    var confirmpass by remember { mutableStateOf("") }
-    var contact by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf((TextFieldValue(""))) }
+    var pass by remember { mutableStateOf(TextFieldValue("")) }
+    var confirmpass by remember { mutableStateOf(TextFieldValue("")) }
     var context= LocalContext.current
     Column(modifier = Modifier
         .fillMaxSize()) {
@@ -71,96 +73,41 @@ fun RegisterScreen(navController: NavController)
             textAlign = TextAlign.Center)
 
         Spacer(modifier = Modifier.height(10.dp))
+        OutlinedTextField(
+            value = email, onValueChange = { email = it },
+            label = { Text(text = "Enter Email") },
 
-        TextField(
-            value = fullnames,
-            onValueChange = { fullnames = it },
-            placeholder = { Text(text = "Enter your full names") },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Default.Person,
-                    contentDescription = "person"
-                )
-            },
+            keyboardOptions = KeyboardOptions . Default . copy (imeAction = ImeAction.Next),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 20.dp, end = 20.dp),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
-        )
+                .padding(8.dp),
 
-        Spacer(modifier = Modifier.height(10.dp))
+            )
+        Spacer(modifier = Modifier.height(20.dp))
 
-        TextField(
-            value = email,
-            onValueChange = { email = it },
-            placeholder = { androidx.compose.material3.Text(text = "Enter email") },
-            leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = "email") },
+        OutlinedTextField(value =pass , onValueChange = {pass=it},
+            label = { Text(text = "Enter password") },
+            keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Next),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 20.dp, end = 20.dp),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
+                .padding(8.dp)
         )
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(20.dp))
+        OutlinedTextField(value =confirmpass , onValueChange = {
+            confirmpass=it},
+            label = { Text(text = "Enter Confirm Pass") },
 
-        TextField(
-            value = contact,
-            onValueChange = { contact = it },
-            placeholder = { androidx.compose.material3.Text(text = "Enter contact") },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Default.Call,
-                    contentDescription = "contact"
-                )
-            },
+            keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Next),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 20.dp, end = 20.dp),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone)
+                .padding(8.dp)
         )
-        Spacer(modifier = Modifier.height(10.dp))
-
-        TextField(
-            value = confirmpass,
-            onValueChange = { confirmpass= it },
-            placeholder = { androidx.compose.material3.Text(text = "Enter password") },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Default.Lock,
-                    contentDescription = "password"
-                )
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 20.dp, end = 20.dp),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
-        )
-        Spacer(modifier = Modifier.height(10.dp))
-
-        TextField(
-            value = contact,
-            onValueChange = { contact = it },
-            placeholder = { androidx.compose.material3.Text(text = "Enter your mobile number") },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Default.Call,
-                    contentDescription = "location"
-                )
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 20.dp, end = 20.dp),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
-        )
-        Spacer(modifier = Modifier.height(10.dp))
-
+        Spacer(modifier = Modifier.height(20.dp))
 
         Button(onClick = {
             val myregister= AuthViewModel(navController,context)
-            myregister.signup(fullnames.trim(),email.trim(),pass.trim(),confirmpass.trim())
+            myregister.signup(fullnames.trim(),email.text.trim(),pass.text.trim(),confirmpass.text.trim())
             navController.navigate(ROUTE_HOME)
-
-
-
 
         }, modifier = Modifier.fillMaxWidth()) {
             Text(text = "Register ")

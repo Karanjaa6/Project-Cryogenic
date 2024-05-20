@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_FAMILIA
 import com.karanjaa.CarYardManagementSystem.ui.theme.Screens.Famiy.ui.theme.CarYardManagementSystemTheme
 import com.karanjaa.caryardmanagementsystem2.Item
 import com.karanjaa.caryardmanagementsystem2.R
@@ -20,38 +21,38 @@ class FamilyActivity : ComponentActivity() {
         val items = listOf(
             Item(
                 title = "Lexus",
-                image = R.drawable.hyundai,
-                Route = "",
+                image = R.drawable.family5,
+                Route = ROUTE_FAMILIA,
                 Value = 500000
             ),
             Item(
                 title = "Mercedes",
-                image = R.drawable.honda,
-                Route = "",
+                image = R.drawable.familllll,
+                Route =ROUTE_FAMILIA ,
                 Value = 477792
             ),
             Item(
                 title = "Cadillac",
-                image = R.drawable.audi,
-                Route = "",
+                image = R.drawable.family2,
+                Route = ROUTE_FAMILIA,
                 Value = 800033
             ),
             Item(
                 title = "Chevrolet",
-                image = R.drawable.suv,
-                Route = "",
+                image = R.drawable.family3,
+                Route = ROUTE_FAMILIA,
                 Value = 560000
             ),
             Item(
                 title = "Ford",
-                image = R.drawable.commercial,
-                Route = "",
+                image = R.drawable.family4,
+                Route = ROUTE_FAMILIA,
                 Value = 370000
             ),
             Item(
                 title = "Renault",
-                image = R.drawable.commercial,
-                Route = "",
+                image = R.drawable.familia,
+                Route = ROUTE_FAMILIA,
                 Value = 578000
             )
         )

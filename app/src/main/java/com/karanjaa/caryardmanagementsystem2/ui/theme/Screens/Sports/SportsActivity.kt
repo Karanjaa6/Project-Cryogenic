@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_SPORTSS
 import com.karanjaa.caryardmanagementsystem2.Item
 import com.karanjaa.caryardmanagementsystem2.R
 import com.karanjaa.caryardmanagementsystem2.ui.theme.Screens.Sports.ui.theme.CarYardManagementSystem2Theme
@@ -21,37 +22,37 @@ class SportsActivity : ComponentActivity() {
             Item(
                 title = "McLaren",
                 image = R.drawable.sports1,
-                Route = "",
+                Route = ROUTE_SPORTSS,
                 Value = 500000
             ),
             Item(
                 title = "Mercedes",
                 image = R.drawable.sports2,
-                Route = "",
+                Route =ROUTE_SPORTSS ,
                 Value = 477792
             ),
             Item(
                 title = "Konisegg",
                 image = R.drawable.sports3,
-                Route = "",
+                Route = ROUTE_SPORTSS,
                 Value = 800033
             ),
             Item(
                 title = "Jaguar",
                 image = R.drawable.sports5,
-                Route = "",
+                Route =ROUTE_SPORTSS ,
                 Value = 560000
             ),
             Item(
                 title = "Ferari",
                 image = R.drawable.sports6,
-                Route = "",
+                Route = ROUTE_SPORTSS,
                 Value = 370000
             ),
             Item(
                 title = "Lamborghini",
                 image = R.drawable.sports7,
-                Route = "",
+                Route = ROUTE_SPORTSS,
                 Value = 578000
             )
         )

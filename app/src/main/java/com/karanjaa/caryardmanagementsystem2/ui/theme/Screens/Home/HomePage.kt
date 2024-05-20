@@ -42,12 +42,17 @@ fun HomeScreen(navController: NavController){
         // var productdata=productviewmodel(navController,context)
 
 
-       androidx.compose.material3.Text(text = "WELCOME TO CRYOGENIC MOTORS",
+       androidx.compose.material3.Text(text = "WELCOME TO ",
             color = Color.Black,
             fontFamily = FontFamily.SansSerif,
             fontSize = 40.sp)
 
-        Spacer(modifier = Modifier.height(100.dp))
+        Spacer(modifier = Modifier.height(10.dp))
+
+        androidx.compose.material3.Text(text = "CRYOGENIC MOTORS ",
+            color = Color.Black,
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 40.sp)
 
         Button(onClick = {
             navController.navigate(ROUTE_CAR)},
@@ -56,15 +61,6 @@ fun HomeScreen(navController: NavController){
         }
 
         Spacer(modifier = Modifier.height(10.dp))
-
-        Button(onClick = {
-            navController.navigate(ROUTE_VIEW_CARS)
-        }, colors = ButtonDefaults.buttonColors(Color.Gray)) {
-            Text(text = "View Vehicle")
-        }
-        Spacer(modifier = Modifier.height(10.dp))
-
-
 
     }
 }

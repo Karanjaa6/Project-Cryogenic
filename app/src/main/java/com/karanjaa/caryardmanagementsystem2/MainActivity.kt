@@ -29,13 +29,13 @@ class MainActivity : ComponentActivity() {
             ),
             Item(
                 title = "Luxury Vehicles",
-                image = R.drawable.familllll,
+                image = R.drawable.rolls,
                 Route = ROUTE_LUXURY,
                 Value = 3
             ),
             Item(
                 title = "Family Vehicles",
-                image = R.drawable.family5,
+                image = R.drawable.familllll,
                 Route = ROUTE_FAMILY,
                 Value = 3
             ),

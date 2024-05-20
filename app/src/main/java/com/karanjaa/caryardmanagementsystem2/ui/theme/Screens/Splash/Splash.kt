@@ -18,7 +18,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_ADD_CARS
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_CAR
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_HOME
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_LOGIN
 import com.karanjaa.caryardmanagementsystem2.R
 import kotlinx.coroutines.delay
@@ -42,7 +44,7 @@ fun SplashScreen(navController: NavHostController) {
                 }))
         // Customize the delay time
         delay(1000L)
-        navController.navigate(ROUTE_CAR)
+        navController.navigate(ROUTE_HOME)
     }
 
     // Image

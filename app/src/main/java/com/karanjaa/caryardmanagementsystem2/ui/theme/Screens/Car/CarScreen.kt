@@ -36,6 +36,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_HOME
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_REGISTER
 import com.karanjaa.caryardmanagementsystem2.Item
 import com.karanjaa.caryardmanagementsystem2.MainActivity
@@ -45,7 +46,7 @@ fun CarScreen(navController: NavController){
     Column(modifier = Modifier
         .fillMaxSize()
         .background(Color.DarkGray)) {
-        Navbar(rememberNavController())
+        Navbar(navController)
         LazyColumnScreen(navController)
 
 
@@ -61,7 +62,7 @@ fun Navbar(navController: NavController){
     TopAppBar(
         title = { Text(text = "CarYard Motors", color = Color.DarkGray) },
         navigationIcon = {
-            IconButton(onClick = {navController.navigate(ROUTE_REGISTER)}) {
+            IconButton(onClick = {navController.navigate(ROUTE_HOME)}) {
                 Icon(imageVector = Icons.Filled.Home, contentDescription = "HOME", tint = Color.DarkGray)
             }
         },
@@ -71,7 +72,7 @@ fun Navbar(navController: NavController){
             navigationIconContentColor = Color.White
         ),
         actions = {
-            IconButton(onClick = { Toast.makeText(context,"You can now share",Toast.LENGTH_SHORT) .show()}) {
+            IconButton(onClick = {navController.navigate(ROUTE_REGISTER)}) {
                 Icon(imageVector = Icons.Filled.Create, contentDescription = "Account", tint = Color.DarkGray)
             }
         })

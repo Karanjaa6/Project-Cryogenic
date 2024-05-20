@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_LURIOUS
 import com.karanjaa.CarYardManagementSystem.ui.theme.Screens.LuxuryCar.ui.theme.CarYardManagementSystemTheme
 import com.karanjaa.caryardmanagementsystem2.Item
 import com.karanjaa.caryardmanagementsystem2.R
@@ -21,37 +22,37 @@ class LuxuryActivity : ComponentActivity() {
             Item(
                 title = "Lexus",
                 image = R.drawable.sports,
-                Route = "",
+                Route = ROUTE_LURIOUS,
                 Value = 500000
             ),
             Item(
                 title = "Mercedes",
                 image = R.drawable.luxury,
-                Route = "",
+                Route = ROUTE_LURIOUS,
                 Value = 477792
             ),
             Item(
                 title = "Cadillac",
                 image = R.drawable.family,
-                Route = "",
+                Route = ROUTE_LURIOUS,
                 Value = 800033
             ),
             Item(
                 title = "Chevrolet",
                 image = R.drawable.commercial,
-                Route = "",
+                Route = ROUTE_LURIOUS,
                 Value = 560000
             ),
             Item(
                 title = "Ford",
                 image = R.drawable.commercial,
-                Route = "",
+                Route = ROUTE_LURIOUS,
                 Value = 370000
             ),
             Item(
                 title = "Renault",
                 image = R.drawable.commercial,
-                Route = "",
+                Route = ROUTE_LURIOUS,
                 Value = 578000
             )
 

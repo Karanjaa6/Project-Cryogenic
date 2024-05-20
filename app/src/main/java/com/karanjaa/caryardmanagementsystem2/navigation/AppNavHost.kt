@@ -14,6 +14,8 @@ import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_ABOUT
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_ADD_CARS
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_CAR
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_COMMERCIAL
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_COMMERCIALL
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_FAMILIA
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_FAMILY
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_HOME
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_LOGIN
@@ -21,6 +23,7 @@ import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_LUXURY
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_REGISTER
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_SPLASH
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_SPORTS
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_SPORTSS
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_UPDATE_CARS
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_UPLOAD_CARS
 import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_VIEW_CARS
@@ -34,6 +37,9 @@ import com.karanjaa.CarYardManagementSystem.ui.theme.Screens.Commercial.Commerci
 import com.karanjaa.CarYardManagementSystem.ui.theme.Screens.Famiy.FamilyScreen
 import com.karanjaa.CarYardManagementSystem.ui.theme.Screens.LuxuryCar.LuxuryScreen
 import com.karanjaa.CarYardManagementSystem.ui.theme.Screens.products.UpdateProductsScreen
+import com.karanjaa.caryardmanagementsystem2.ui.theme.Screens.Garii.CommScreen
+import com.karanjaa.caryardmanagementsystem2.ui.theme.Screens.Garii.FamiliaScreen
+import com.karanjaa.caryardmanagementsystem2.ui.theme.Screens.Garii.SportssScreen
 import com.karanjaa.caryardmanagementsystem2.ui.theme.Screens.Splash.SplashScreen
 import com.karanjaa.caryardmanagementsystem2.ui.theme.Screens.Sports.SportsScreen
 
@@ -51,6 +57,9 @@ fun AppNavHost(modifier: Modifier=Modifier, navController: NavHostController= re
         composable(ROUTE_SPORTS){ SportsScreen(navController = navController)}
         composable(ROUTE_COMMERCIAL){ CommercialScreen(navController = navController)}
         composable(ROUTE_SPLASH){ SplashScreen(navController = navController)}
+        composable(ROUTE_SPORTSS){ SportssScreen(navController = navController)}
+        composable(ROUTE_FAMILIA){ FamiliaScreen(navController = navController)}
+        composable(ROUTE_COMMERCIALL){ CommScreen(navController = navController)}
         composable(ROUTE_VIEW_CARS){
             ViewProductsScreen(navController=navController)
         }

@@ -10,6 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_COMMERCIALL
+import com.karanjaa.CarYardManagementSystem.navigation.ROUTE_LURIOUS
 import com.karanjaa.CarYardManagementSystem.ui.theme.Screens.Commercial.ui.theme.CarYardManagementSystemTheme
 
 import com.karanjaa.caryardmanagementsystem2.Item
@@ -23,37 +25,37 @@ class CommercialActivity : ComponentActivity() {
             Item(
                 title = "Mercedes",
                 image = R.drawable.trck2,
-                Route = "",
+                Route = ROUTE_COMMERCIALL,
                 Value = 500000
             ),
             Item(
                 title = "Renault",
                 image = R.drawable.truck3,
-                Route = "",
+                Route = ROUTE_COMMERCIALL,
                 Value = 477792
             ),
             Item(
                 title = "Man",
                 image = R.drawable.truck4,
-                Route = "",
+                Route = ROUTE_COMMERCIALL,
                 Value = 800033
             ),
             Item(
                 title = "Chevrolet",
                 image = R.drawable.truck7,
-                Route = "",
+                Route = ROUTE_COMMERCIALL,
                 Value = 560000
             ),
             Item(
                 title = "Ford",
                 image = R.drawable.truck5,
-                Route = "",
+                Route = ROUTE_COMMERCIALL,
                 Value = 370000
             ),
             Item(
                 title = "Scania",
                 image = R.drawable.truck6,
-                Route = "",
+                Route = ROUTE_COMMERCIALL,
                 Value = 578000
             )
 
